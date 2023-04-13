@@ -3,22 +3,6 @@ import matplotlib.pyplot as plt
 import scipy.stats as stats
 
 
-# Вывод результатов расчета корреляции Пирсона
-def show_result(X, Y, C, lim=0.5, number=None):
-    tit = f'Эксперимент {number}:'
-    print(tit)
-    print(f'Выборка X = {X}')
-    print(f'Выборка Y = {Y}')
-    print(f'Коэффициент корреляции Пирсона:\n{C}')
-    print()
-
-    plt.scatter(X, Y)
-    plt.title(tit)
-    plt.xlabel('Выборка X')
-    plt.ylabel('Выборка Y')
-    plt.show()
-
-
 # Округление элементов массива
 def np_round(arr, val):
     return np.array([list(map(lambda ell: round(ell, val), el)) for el in arr])
@@ -149,6 +133,22 @@ print(f'Доверительный интервал мат. ожидания = {
 
 
 exit()
+
+
+# Вывод результатов расчета корреляции Пирсона
+def show_result(X, Y, C, lim=0.5, number=None):
+    tit = f'Эксперимент {number}:'
+    print(tit)
+    print(f'Выборка X = {X}')
+    print(f'Выборка Y = {Y}')
+    print(f'Коэффициент корреляции Пирсона:\n{C}')
+    print()
+
+    plt.scatter(X, Y)
+    plt.title(tit)
+    plt.xlabel('Выборка X')
+    plt.ylabel('Выборка Y')
+    plt.show()
 
 
 # Задание-1 Семинара
